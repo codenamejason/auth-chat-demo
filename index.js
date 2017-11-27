@@ -54,8 +54,8 @@ passport.serializeUser(function(user, done) {
     var dbChannel = 'user_' + user.id;
 
     var db = pubnub.init({
-      subscribe_key: 'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
-      publish_key: 'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
+      subscribe_key: 'sub-c-6db49fd6-c946-11e7-be55-4e84f57698c8',// 'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
+      publish_key: 'pub-c-0481698f-867e-4693-a9ec-3364ea0e120a',//'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
       secret_key: config.pubnub.secret_key,
       auth_key: config.pubnub.auth_key,
     });
@@ -122,8 +122,8 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GitHubStrategy({
     clientID: config.auth.github.client_id,
     clientSecret: config.auth.github.client_secret,
-    callbackURL: 'https://pubnub-auth-chat.herokuapp.com/callback'
-    //callbackURL: 'http://localhost:3000/callback'
+    //callbackURL: 'https://pubnub-auth-chat.herokuapp.com/callback'
+    callbackURL: 'http://localhost:3000/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     var user = profile;
@@ -136,8 +136,8 @@ var channel = 'am-ecc-chat';
 var channelPres = channel + '-pnpres';
 
 pubnub = pubnub.init({
-  subscribe_key: 'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
-  publish_key: 'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
+  subscribe_key: 'sub-c-6db49fd6-c946-11e7-be55-4e84f57698c8',//'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
+  publish_key: 'pub-c-0481698f-867e-4693-a9ec-3364ea0e120a',//'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
   secret_key: config.pubnub.secret_key,
   auth_key: config.pubnub.auth_key,
   ssl: true

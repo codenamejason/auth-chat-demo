@@ -16,8 +16,8 @@
   var keysCache = {};
   
   var pubnub = PUBNUB.init({
-      subscribe_key: 'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
-      publish_key: 'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
+      subscribe_key: 'sub-c-6db49fd6-c946-11e7-be55-4e84f57698c8',//'sub-c-981faf3a-2421-11e5-8326-0619f8945a4f',
+      publish_key: 'pub-c-0481698f-867e-4693-a9ec-3364ea0e120a',// 'pub-c-351c975f-ab81-4294-b630-0aa7ec290c58',
       uuid: user.username,
       auth_key: user.accessToken,
       ssl: true
